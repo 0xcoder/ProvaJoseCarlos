@@ -1,0 +1,45 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Data.Win.ADODB, Vcl.StdCtrls,
+  Vcl.Mask, Vcl.DBCtrls;
+
+type
+  TFrmFuncionarios = class(TForm)
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit4: TDBEdit;
+    ADOConnection2: TADOConnection;
+    ADOQuery2: TADOQuery;
+    DataSource2: TDataSource;
+    Cadastrar: TButton;
+    Button1: TButton;
+    procedure CadastrarClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmFuncionarios: TFrmFuncionarios;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmFuncionarios.Button1Click(Sender: TObject);
+begin
+ADOQUERY2.Append;
+end;
+
+procedure TFrmFuncionarios.CadastrarClick(Sender: TObject);
+begin
+ADOQUERY2.Post;
+end;
+
+end.

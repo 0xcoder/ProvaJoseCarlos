@@ -1,0 +1,20 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  Unit1 in 'Unit1.pas' {FrmProdutos},
+  Unit2 in 'Unit2.pas' {FrmFuncionarios},
+  Unit3 in 'Unit3.pas' {FrmPrincipal},
+  Unit4 in 'Unit4.pas' {frmlogin};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TFrmFuncionarios, FrmFuncionarios);
+  Application.CreateForm(TFrmProdutos, FrmProdutos);
+  Application.CreateForm(Tfrmlogin, frmlogin);
+  Application.Run;
+end.

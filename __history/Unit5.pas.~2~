@@ -1,0 +1,40 @@
+unit Unit5;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.DBCtrls,
+  Data.DB, Data.Win.ADODB;
+
+type
+  TForm5 = class(TForm)
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    DBEdit3: TDBEdit;
+    DBEdit4: TDBEdit;
+    DBEdit5: TDBEdit;
+    Button1: TButton;
+    Button2: TButton;
+    ADOConnection4: TADOConnection;
+    ADOQuery4: TADOQuery;
+    DataSource4: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form5: TForm5;
+
+implementation
+
+{$R *.dfm}
+
+end.
